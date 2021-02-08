@@ -1,0 +1,56 @@
+{
+  "name": "leonovadvs",
+  "version": "1.0.1",
+  "description": "Leonov ADV Search",
+  "main": "index.php",
+  "scripts": {
+    "test": "editorconfig-checker",
+    "clear_r": "ssh  leonovadv@77.222.40.61 \"rm  advs_leonovadv_ru/public_html/wp-content/themes/leonov/*.*\"",
+    "send_r": "scp -C *.php *.png *.css  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_ms": "scp -C *.css  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_head": "scp -C header.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_one": "scp -C tovar-elem.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_cat": "scp -C category.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_singl": "scp -C single.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_index": "scp -C index.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_func": "scp -C functions.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_futt": "scp -C footer.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "mk_part_carbon": "ssh  leonovadv@77.222.40.61 \"mkdir -p advs_leonovadv_ru/public_html/wp-content/themes/leonov/inc\"",
+    "send_carbon": "scp -C -r inc  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_carbon_fild": "scp -C -r inc/custom-fields-options  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/inc/",
+    "mk_part_dir": "ssh  leonovadv@77.222.40.61 \"mkdir -p advs_leonovadv_ru/public_html/wp-content/themes/leonov/template-parts\"",
+    "send_part": "scp -C -r template-parts  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "mk_part_img": "ssh  leonovadv@77.222.40.61 \"mkdir -p advs_leonovadv_ru/public_html/wp-content/themes/leonov/img\"",
+    "send_img": "scp -r img  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "mk_part_js": "ssh  leonovadv@77.222.40.61 \"mkdir -p advs_leonovadv_ru/public_html/wp-content/themes/leonov/js\"",
+    "send_js": "scp -r js  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "mk_part_css": "ssh  leonovadv@77.222.40.61 \"mkdir -p advs_leonovadv_ru/public_html/wp-content/themes/leonov/css\"",
+    "send_css": "scp -C -r css  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "mk_part_fonts": "ssh  leonovadv@77.222.40.61 \"mkdir -p advs_leonovadv_ru/public_html/wp-content/themes/leonov/fonts\"",
+    "send_fonts": "scp -C -r fonts  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "group_media": "group-css-media-queries css/main.css css/g_main.css",
+    "send_all": "npm run send_r & npm run send_css & npm run send_part & npm run send_img & npm run send_image & npm run send_js & npm run send_fonts",
+    "send_pars": "scp -r pars  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asmi046/leonov_advs.git"
+  },
+  "keywords": [
+    "wp",
+    "WordPress"
+  ],
+  "author": "Asmi-Studio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asmi046/leonov_advs/issues"
+  },
+  "homepage": "https://github.com/asmi046/leonov_advs#readme",
+  "dependencies": {
+    "editorconfig-checker": "^3.1.0",
+    "group-css-media-queries": "^1.4.1",
+    "postcss-cli": "^7.1.2",
+    "postcss-csso": "^4.0.0",
+    "postcss-import": "^12.0.1"
+  }
+}
