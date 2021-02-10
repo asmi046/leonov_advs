@@ -96,7 +96,7 @@
 <header class="header__oneblk">
 	<div class="centerLine">
 		
-		<a href="#" class="header__logo">advs.leonovadv</a>
+		<a href="http://advs.leonovadv.ru" class="header__logo">advs.leonovadv</a>
 
 	</div>
 </header>
