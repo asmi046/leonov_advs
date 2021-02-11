@@ -25,27 +25,27 @@ Template Name: Просмотр рекламного блока
 				<!-- 	</script> -->
 				<script> 
 
-					function repaintPlex() {
-						myMap.geoObjects.each(function (geoObject) {
-							if (selected.indexOf(geoObject.properties.get('id')) != -1) 
-							{
-								geoObject.options.set('preset', 'islands#greenDotIcon');
-								$(".CartBtn"+geoObject.properties.get('id')).css("color", "red");
-							} else  geoObject.options.set('preset', 'islands#blueDotIcon')});
-						if (selected.length == 0)
-							$(".bscetCount").html("Корзина пуста");
-						else $(".bscetCount").html("Выбрано конструкций: "+selected.length);
-					}
+					// function repaintPlex() {
+					// 	myMap.geoObjects.each(function (geoObject) {
+					// 		if (selected.indexOf(geoObject.properties.get('id')) != -1) 
+					// 		{
+					// 			geoObject.options.set('preset', 'islands#greenDotIcon');
+					// 			$(".CartBtn"+geoObject.properties.get('id')).css("color", "red");
+					// 		} else  geoObject.options.set('preset', 'islands#blueDotIcon')});
+					// 	if (selected.length == 0)
+					// 		$(".bscetCount").html("Корзина пуста");
+					// 	else $(".bscetCount").html("Выбрано конструкций: "+selected.length);
+					// }
 
-					var selected = [];
-					var selectedTmp = $.cookie('plbascet').split(',');
+					// var selected = [];
+					// var selectedTmp = $.cookie('plbascet').split(',');
 
-					if (selectedTmp[0] == 0) selectedTmp = [];
+					// if (selectedTmp[0] == 0) selectedTmp = [];
 
-					for (i = 0; i<selectedTmp.length; i++)
-						selected.push(Number(selectedTmp[i]));
+					// for (i = 0; i<selectedTmp.length; i++)
+					// 	selected.push(Number(selectedTmp[i]));
 
-					console.log(selected);
+					// console.log(selected);
 
 					function addPlex(index) {
 
@@ -144,8 +144,8 @@ Template Name: Просмотр рекламного блока
 
 
 					$tableStr .= "<div class='tabl-flex'>";
-					$tableStr .= "<div id = 'cl1h' class='tabl-flex__1'>Город</div>";
-					$tableStr .= "<div id = 'cl1' class='tabl-flex__2'>".$row->Gorod."</div>";
+					$tableStr .= "<div id = 'cl1h' class='tabl-flex__1 tabl-flex__gr'>Город</div>";
+					$tableStr .= "<div id = 'cl1' class='tabl-flex__2 tabl-flex__gr'>".$row->Gorod."</div>";
 					$tableStr .= "</div>";
 
 					$tableStr .= "<div class='tabl-flex'>";
@@ -154,8 +154,8 @@ Template Name: Просмотр рекламного блока
 					$tableStr .= "</div>";
 
 					$tableStr .= "<div class='tabl-flex'>";
-					$tableStr .= "<div id = 'cl3h' class='tabl-flex__1'>Адрес</div>";
-					$tableStr .= "<div id = 'cl3' class='tabl-flex__2'>".$row->Description."</div>";
+					$tableStr .= "<div id = 'cl3h' class='tabl-flex__1 tabl-flex__gr'>Адрес</div>";
+					$tableStr .= "<div id = 'cl3' class='tabl-flex__2 tabl-flex__gr'>".$row->Description."</div>";
 					$tableStr .= "</div>";
 
 					$tableStr .= "<div class='tabl-flex'>";
@@ -164,8 +164,8 @@ Template Name: Просмотр рекламного блока
 					$tableStr .= "</div>";
 
 					$tableStr .= "<div class='tabl-flex'>";
-					$tableStr .= "<div id = 'cl5h' class='tabl-flex__1'>Освещение</div>";
-					$tableStr .= "<div id = 'cl5' class='tabl-flex__2'>".$osveshenie."</div>";
+					$tableStr .= "<div id = 'cl5h' class='tabl-flex__1 tabl-flex__gr'>Освещение</div>";
+					$tableStr .= "<div id = 'cl5' class='tabl-flex__2 tabl-flex__gr'>".$osveshenie."</div>";
 					$tableStr .= "</div>";
 
 					$tableStr .= "<div class='tabl-flex'>";
@@ -174,8 +174,8 @@ Template Name: Просмотр рекламного блока
 					$tableStr .= "</div>";
 
 					$tableStr .= "<div class='tabl-flex'>";
-					$tableStr .= "<div id = 'cl7h' class='tabl-flex__1'>GRP</div>";
-					$tableStr .= "<div id = 'cl7' class='tabl-flex__2'>".$row->GRP."</div>";
+					$tableStr .= "<div id = 'cl7h' class='tabl-flex__1 tabl-flex__gr'>GRP</div>";
+					$tableStr .= "<div id = 'cl7' class='tabl-flex__2 tabl-flex__gr'>".$row->GRP."</div>";
 					$tableStr .= "</div>";
 
 						// $tableStr .= "<td id = 'cl3' class = 'tdDesc cl3'>".$row->Description."</td>";
@@ -289,7 +289,7 @@ Template Name: Просмотр рекламного блока
 							// заданным id ("map").
 							myMap = new ymaps.Map('map', {
 								center: [51.73415798382783,36.19187236903374], 
-								zoom: 7,
+								zoom: 13,
 								class: "myMap11",
 								controls: ['zoomControl', 'routeButtonControl', 'geolocationControl', 'typeSelector', 'fullscreenControl']
 							}, {
@@ -306,10 +306,10 @@ Template Name: Просмотр рекламного блока
 							?>
 						}
 
-						ymaps.load(function() {
-							repaintPlex();
+						// ymaps.load(function() {
+						// 	repaintPlex();
 
-						});
+						// });
 					</script>
 				</div>
 

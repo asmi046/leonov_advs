@@ -126,6 +126,9 @@ strong {
 .header__logo:hover {
   text-decoration: none;
 }
+.header__logo span {
+  font-weight: bold;
+}
 .indexmap {
 	height: 800px;
 	border: 1px solid lightgray;
@@ -162,16 +165,24 @@ strong {
 .tabl-flex__2,
 .tabl-flex__1 {
 	width: 30% !important;
-  height: 23px !important;
+  min-height: 30px !important;
   padding: 0 10px;
-  border: 1px solid grey;
   display: flex;
   /*justify-content: center;*/
   align-items: center;
+  background: #f5f4f4;
 }
 .tabl-flex__2 {
 	width: 100% !important;
 }
+.one-reklamaBlk h1 {
+	color: grey !important;
+	text-transform: none !important;
+}
+.tabl-flex__gr {
+	background: #E0E1E3;
+}
+
 
 
 .main {
@@ -599,8 +610,8 @@ margin-right:0;
 
 .contentAllPage .content {
 	min-height:100px;
-	float:left;
-	width:70%;	
+/*	float:left;
+	width:70%;	*/
 }
 
 .contentAllPage .content a { 
@@ -1280,9 +1291,9 @@ width: 100%;
 	text-transform:uppercase;
 }
 
-#noBlk, .contentAllPage .reklamaBlk {
+/*#noBlk, .contentAllPage .reklamaBlk {
 	width:100%;
-}
+}*/
 
 .bascet {
 	width:100%;
@@ -1645,6 +1656,13 @@ margin-right: 0%;
 	}
 }
 
+@media screen and (max-width:1200px), handheld{ 
+.centerLine {
+  padding: 0 10px;
+  /*width: 100%;*/
+	}
+}
+
 @media screen and (max-width:1080px), handheld{ 
 	.logoLine {
 		margin-left: 0;
@@ -1678,10 +1696,10 @@ margin-right: 0%;
 		padding-right: 0%;
 	}
 	
-	.centerLine {
+/*	.centerLine {
 		max-width:96%;
 		margin:0 2%;
-	}
+	}*/
 	
 	#cl0 {    width: 3.9%;} #cl0h {}
 	#cl1h{} #cl1{width: 4.9%;} 
@@ -1845,7 +1863,7 @@ margin-right: 0%;
 		background: rgba(0, 0, 0, 0) url("images/leonovIconUkazatel.png") no-repeat scroll -447px 0 / 510px auto;
 	}
 	
-	#cl0 {width: 6%;} #cl0h {width: 4%;}
+/*	#cl0 {width: 6%;} #cl0h {width: 4%;}
 	#cl1h{width: 6%;} #cl1{width: 6%;} 
 	#cl2h, #cl2{display:none;}
 	#cl3{width: 39%;} #cl3h {width: 39%;}
@@ -1853,7 +1871,7 @@ margin-right: 0%;
 	#cl5h{width: 8%;} #cl5{width: 8%;}
 	#cl6h{} #cl6{}
 	#cl7h{} #cl7{}
-	#cl8{width: 3.8%;} #cl8h {}
+	#cl8{width: 3.8%;} #cl8h {}*/
 	
 	.logoLineFixed .meuBtn {
 		display:block;
@@ -1894,7 +1912,13 @@ margin-right: 0%;
 	}
 	
 	.mapBlk .info {
-		width: 43%;
+		flex: 0 0 290px;
+		min-height: 0px;
+		margin-right: 5px;
+	}
+	.one-tableBlk {
+    margin-bottom: 0;
+    flex: 1 1 auto;
 	}
 	
 }
@@ -1942,9 +1966,9 @@ margin-right: 0%;
 		margin-bottom:20px;
 	}
 	
-	.contentAllPage .content {
+/*	.contentAllPage .content {
 		width:100%;
-	}
+	}*/
 	
 	.contentAllPage .sidebar {
 		width:100%;
@@ -2005,7 +2029,24 @@ margin-right: 0%;
 		width: 80px;
 		height: 80px;
 	}
+
+@media screen and (max-width:660px), handheld {
+.mapBlk-oneBlk {
+    flex-wrap: wrap;
+	}
+	.mapBlk .info {
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+	}
+	.contentAllPage .content {
+    margin-bottom: 20px;
 }
+.indexmap {
+    margin-bottom: 20px;
+}
+}
+
 @media screen and (max-width:640px), handheld{ 
 	.menuBlk {
 		width:100%;
@@ -2055,7 +2096,7 @@ margin-right: 0%;
 		left: 20px;
 	}
 	
-	#cl0 {width: 6%;} #cl0h {width: 4%;}
+/*	#cl0 {width: 6%;} #cl0h {width: 4%;}
 	
 	#cl1h{width: 8%;} #cl1{width: 8%;} 
 	#cl2h, #cl2{display:none;}
@@ -2064,7 +2105,7 @@ margin-right: 0%;
 	#cl5h,#cl5{display:none;}
 	#cl6h{width: 9%;} #cl6{width: 9%;}
 	#cl7h{width: 5%;} #cl7{width: 5%;}
-	#cl8{width: 6%;} #cl8h {width: 6%;}
+	#cl8{width: 6%;} #cl8h {width: 6%;}*/
 
 	.contacts-map__photo,
 	.contacts-map__map  {
@@ -2257,7 +2298,7 @@ margin-right: 0%;
 		margin-bottom: 10px;
 	}
 	
-	#cl0 {width:15%;} #cl0h { width:13%;}
+/*	#cl0 {width:15%;} #cl0h { width:13%;}
 	#cl01h, #cl01{display:none;}
 	#cl1h, #cl1{width:100%; display:none;} 
 	#cl2h, #cl2{width:100%; display:none;}
@@ -2266,7 +2307,7 @@ margin-right: 0%;
 	#cl5h, #cl5{width:100%;display:none;}
 	#cl6h, #cl6{width:100%;display:none;}
 	#cl7h, #cl7{width:100%;display:none;}
-	#cl8{width:9%;} #cl8h { width:17%;}
+	#cl8{width:9%;} #cl8h { width:17%;}*/
 	
 	.tableBlk table tbody {
 		height:150px;
@@ -2315,6 +2356,26 @@ margin-right: 0%;
 	}
 }
 
+
+@media screen and (max-width:460px), handheld{ 
+	.tabl-flex__1 {
+    width: 30% !important;
+    padding: 5px 10px;
+	}
+	.tabl-flex__2 {
+    width: 60% !important;
+    padding: 5px 10px;
+	}
+}
+
+@media screen and (max-width:424px), handheld {
+/*	.tabl-flex__2, .tabl-flex__1 {
+    width: 45% !important;
+    padding: 5px 10px;
+	}*/
+}
+
+
 @media screen and (max-width:420px), handheld {
 	.filterBlk select {
 		width: 100%;
@@ -2352,6 +2413,7 @@ margin-right: 0%;
 		background-position: -66px;
 	}
 }
+
 @media screen and (max-width:360px), handheld{
 	.contacts-map__photo {
 		background-position: -106px;

@@ -68,27 +68,27 @@ jQuery(document).ready(function($) {
 		$(".tableBlk table td").css('float', 'unset');
 	}
 
-	$(".slider-partners").slick({
-	    slidesToShow: 4,
-	    arrows: true,
-	    prevArrow: '<div class="slider-arrow slider-arrow-prev"></div>',
-	    nextArrow: '<div class="slider-arrow slider-arrow-next"></div>',
-	    autoplay: true,
-	    responsive: [
-		    {
-		      breakpoint: 874,
-		      settings: {
-		        slidesToShow: 2,
-		      }
-		    },
-	    {
-	      breakpoint: 600,
-	      settings: {
-	        slidesToShow: 1,
-	      }
-	    }
-	  ]
-	});
+	// $(".slider-partners").slick({
+	//     slidesToShow: 4,
+	//     arrows: true,
+	//     prevArrow: '<div class="slider-arrow slider-arrow-prev"></div>',
+	//     nextArrow: '<div class="slider-arrow slider-arrow-next"></div>',
+	//     autoplay: true,
+	//     responsive: [
+	// 	    {
+	// 	      breakpoint: 874,
+	// 	      settings: {
+	// 	        slidesToShow: 2,
+	// 	      }
+	// 	    },
+	//     {
+	//       breakpoint: 600,
+	//       settings: {
+	//         slidesToShow: 1,
+	//       }
+	//     }
+	//   ]
+	// });
 
 	var $table = $('table.scroll'),
     $bodyCells = $table.find('tbody tr:first').children(),

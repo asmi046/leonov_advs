@@ -22,7 +22,7 @@
 	<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script> -->
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.cookie.js"></script>
-	<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/icon.png" />
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/advertisement.png" />
 
 	<?php wp_head(); // API Hook ?> 
 
@@ -96,7 +96,7 @@
 <header class="header__oneblk">
 	<div class="centerLine">
 		
-		<a href="http://advs.leonovadv.ru" class="header__logo">advs.leonovadv</a>
+		<a href="https://adv-search.ru" class="header__logo">adv-<span>search</span>.ru</a>
 
 	</div>
 </header>
