@@ -13,9 +13,10 @@ Template Name: Просмотр рекламного блока
 			<div class = "content reklamaBlk one-reklamaBlk">
 
 				<?php
-				global $wpdb;
+				//global $wpdb;
+				$wpdb_main = new wpdb( 'leonovadv_asmi', 'JfxnYyFums', 'leonovadv_asmi', 'localhost' );
 				$Ref = !empty($_REQUEST["a"])?"%".$_REQUEST["a"]."%":"%";			
-				$result = $wpdb->get_results( "SELECT * FROM `transfet_base` WHERE `Ref` LIKE '".$Ref."' ORDER BY `transfet_base`.`Description` ASC" );
+				$result = $wpdb_main->get_results( "SELECT * FROM `transfet_base` WHERE `Ref` LIKE '".$Ref."' ORDER BY `transfet_base`.`Description` ASC" );
 				?>
 
 				<h1><?php the_title(); ?>: <span style = "color:black; text-transform:none;"><?php echo $result[0]->Description;?></span></h1>
@@ -108,11 +109,11 @@ Template Name: Просмотр рекламного блока
 							$mapStr .= "else \r\n";
 							$mapStr .= "myPlacemark".$row->id.".properties.set('balloonContent', '<b>Адрес:</b> ".$row->Description."<br/> <b>Тип:</b>  ".$row->Type."  <span class = \'btnsUpr\'><i onclick = \'addPlex(".$row->id.");\'; title = \'Добавить в корзину\'class=\'outCartBtn  CartBtn CartBtn".$row->id." fa fa-shopping-cart\' aria-hidden=\'true\'></i></span>');\r\n";
 
-
-							$MapImg = get_bloginfo("template_url")."/images/no-photo.png";
+							$pictureSiteUrl = "//leonovadv.ru/";
+							$MapImg = $pictureSiteUrl."/images/no-photo.png";
 							if (!empty($row->Img))
 							{
-								$MapImg = get_bloginfo("url")."/transfer/".$row->Img;
+								$MapImg = $pictureSiteUrl."/transfer/".$row->Img;
 
 
 							} else 

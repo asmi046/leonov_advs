@@ -9,7 +9,7 @@
     "send_r": "scp -C *.php *.png *.css  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
     "send_ms": "scp -C *.css  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
     "send_head": "scp -C header.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
-    "send_one": "scp -C tovar-elem.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
+    "send_one": "scp -C page-oneblk.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
     "send_cat": "scp -C category.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
     "send_singl": "scp -C single.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
     "send_index": "scp -C index.php  leonovadv@77.222.40.61:advs_leonovadv_ru/public_html/wp-content/themes/leonov/",
