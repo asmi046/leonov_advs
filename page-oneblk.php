@@ -87,6 +87,7 @@ Template Name: Просмотр рекламного блока
 
 
 					$i =1;
+					$MapCenter = "";
 
 					foreach ($result as $row) {
 						$osveshenie = true;
@@ -94,6 +95,7 @@ Template Name: Просмотр рекламного блока
 						else $osveshenie = "Нет";
 
 						if (!empty($row->Koordinati)) {
+							$MapCenter = $row->Koordinati;
 							$mapStr .= "myPlacemark".$row->id." = new ymaps.Placemark(".$row->Koordinati.", {\r\n";
 							$mapStr .= "balloonContent: '<b>Адрес:</b> ".$row->Description."<br/> <b>Тип:</b>  ".$row->Type."  <span class = \'btnsUpr\'><i onclick = \'addPlex(".$row->id.");\'; title = \'Добавить в корзину\'class=\'toCartBtn  CartBtn CartBtn".$row->id." fa fa-shopping-cart\' aria-hidden=\'true\'></i></span>',\r\n";
 							$mapStr .= "id: ".$row->id;
@@ -288,8 +290,8 @@ Template Name: Просмотр рекламного блока
 							// Создание экземпляра карты и его привязка к контейнеру с
 							// заданным id ("map").
 							myMap = new ymaps.Map('map', {
-								center: [51.73415798382783,36.19187236903374], 
-								zoom: 13,
+								center: <? echo $MapCenter ?>, 
+								zoom: 14,
 								class: "myMap11",
 								controls: ['zoomControl', 'routeButtonControl', 'geolocationControl', 'typeSelector', 'fullscreenControl']
 							}, {
